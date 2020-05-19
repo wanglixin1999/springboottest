@@ -4,6 +4,7 @@ package com.example.springboottest.controller;
  * Created by wanglixin
  * 2019/12/17 5:58 PM
  */
+
 import com.example.springboottest.entity.User;
 import com.example.springboottest.service.UserLoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ public class UserLoginController {
 
     /**
      * 跳转到用户登录页面
+     *
      * @return 登录页面
      */
     @RequestMapping(value = {"/loginHtml"})
@@ -36,6 +38,7 @@ public class UserLoginController {
 
     /**
      * 跳转到用户注册页面
+     *
      * @return 注册页面
      */
     @RequestMapping(value = {"/registerpage"})
@@ -45,14 +48,15 @@ public class UserLoginController {
 
     /**
      * 获取用户名与密码，用户登录
+     *
      * @return 登录成功页面
      */
     @RequestMapping(value = {"/userLogin"})
     public String userLogin(@RequestParam("username") String username, @RequestParam("password") String password,
                             HttpServletRequest request) {
-        User user = userLoginService.userLogin(username,password);
-        if(user != null){                                                  //登录成功
-            request.getSession().setAttribute("session_user",user);     //将用户信息放入session
+        User user = userLoginService.userLogin(username, password);
+        if (user != null) {                                                  //登录成功
+            request.getSession().setAttribute("session_user", user);     //将用户信息放入session
             return "index";
         }
         return "loginError";
@@ -60,6 +64,7 @@ public class UserLoginController {
 
     /**
      * 注册新用户
+     *
      * @return 注册结果
      */
     @ResponseBody
@@ -68,13 +73,13 @@ public class UserLoginController {
                           @RequestParam("password") String password,
                           @RequestParam("password2") String password2,
                           @RequestParam("age") int age) {
-        if(!password.equals(password2)){
+        if (!password.equals(password2)) {
             return "两次密码不相同，注册失败！！";
         } else {
-            int res = userLoginService.adduser(username,password,age);
-            if(res == 0){
+            int res = userLoginService.adduser(username, password, age);
+            if (res == 0) {
                 return "注册失败！";
-            }else {
+            } else {
                 return "注册成功！";
             }
         }

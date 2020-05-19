@@ -38,7 +38,6 @@ public class User {
      * This method returns the value of the database column t_user.id
      *
      * @return the value of t_user.id
-     *
      * @mbggenerated
      */
     public Integer getId() {
@@ -50,7 +49,6 @@ public class User {
      * This method sets the value of the database column t_user.id
      *
      * @param id the value for t_user.id
-     *
      * @mbggenerated
      */
     public void setId(Integer id) {
@@ -62,7 +60,6 @@ public class User {
      * This method returns the value of the database column t_user.username
      *
      * @return the value of t_user.username
-     *
      * @mbggenerated
      */
     public String getUsername() {
@@ -74,7 +71,6 @@ public class User {
      * This method sets the value of the database column t_user.username
      *
      * @param username the value for t_user.username
-     *
      * @mbggenerated
      */
     public void setUsername(String username) {
@@ -86,7 +82,6 @@ public class User {
      * This method returns the value of the database column t_user.password
      *
      * @return the value of t_user.password
-     *
      * @mbggenerated
      */
     public String getPassword() {
@@ -98,7 +93,6 @@ public class User {
      * This method sets the value of the database column t_user.password
      *
      * @param password the value for t_user.password
-     *
      * @mbggenerated
      */
     public void setPassword(String password) {
@@ -110,7 +104,6 @@ public class User {
      * This method returns the value of the database column t_user.age
      *
      * @return the value of t_user.age
-     *
      * @mbggenerated
      */
     public Integer getAge() {
@@ -122,7 +115,6 @@ public class User {
      * This method sets the value of the database column t_user.age
      *
      * @param age the value for t_user.age
-     *
      * @mbggenerated
      */
     public void setAge(Integer age) {
